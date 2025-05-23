@@ -8,23 +8,21 @@ html, body {
     font-family: 'Cal Sans', 'Noto Sans Thai', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    position: relative;
-    display: flex;
     flex-direction: column;
     min-height: 100dvh;
     scroll-behavior: smooth;
 
     --w-accent: #4096e1;
     --w-accent-hover: #1d4c74;
-    --w-bg-light: #ffe4e6;
+    --w-bg-light: #ccd8ce;
     --w-box-shadow: none;
-    --bs-body-color: #334155;
-    --bs-body-bg: #ffffff;
+    --bs-body-color: #29546e;
+    --bs-body-bg: #ccd8ce;
 }
 
 
 h1, h2, h3, h4, h5 ,h6{
-    font-family: 'Cal Sans';
+    font-family: 'Cal Sans';    
 }
 
 p{
@@ -33,11 +31,18 @@ p{
     margin: 0;
 }
 
+.body, .herosec, .info, .bg-info, .wi-s, .info-container,.latext, ul.social, ul.social li a,.st-l, .past, .rowpicinfo, .frame-video, .gap-video, .box-img, .text, .hd-li, .rv, .social-head, .botton, .fan-sigh svg, .fan-sigh {
+    display: flex; 
+}
+
+.bg-info, .info-container, .rowpicinfo, .wi-dis, .head-embed, .collum-social, .all-botton, .collum-social{
+    max-width: 1280px;
+}
+
 .herosec {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    display: flex;
     align-items: flex-end; /* ขยับลง */
     text-align: center;
     padding: 0 50px 80px; /* padding-bottom 80px */
@@ -54,7 +59,6 @@ p{
 }
 
 .info {
-    display: flex;
     align-items: flex-start;
     position: relative;
     z-index: 1;
@@ -65,6 +69,19 @@ p{
     font-size: calc(1.75rem + 5vw);
     margin: 0;
     font-weight: 700;
+}
+
+.infosection, .discovery{
+    background: #f2f4f7;
+}
+
+.bg-info{
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 12px;
 }
 
 .tread-x {
@@ -89,20 +106,13 @@ p{
 .tread-x:active {
     transform: scale(0.95); /* กดแล้วย่อเล็กน้อย */
 }
- 
-
+    
 a{
     text-decoration: none;
 }
-
-.infosection, .discovery {
-    padding: 60px 20px;
-  }
   
 .info-container {
-    max-width: 1000px;
     margin: auto;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
@@ -117,8 +127,7 @@ a{
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
-  .wi-s{
-    display: flex;
+.wi-s{
     justify-content: center;
     font-size: 1.2rem;
     font-weight: 600;
@@ -132,7 +141,6 @@ a{
   
   .info-text {
     flex: 1;
-    min-width: 280px;
     margin: 0;
     max-width: 417.500px;
   }
@@ -152,11 +160,10 @@ a{
     margin: 0;
   }
   
-  ul.social {
+ul.social {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
     gap: 2em;
     justify-content: center; /* ตรงกลาง */
     align-items: center;
@@ -164,7 +171,6 @@ a{
 }
 
 ul.social li a {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 3em;
@@ -190,7 +196,6 @@ ul.social li a:hover svg {
 
 .past{
     margin-top: 30px;
-    display: flex;
     justify-content: center;
 }
 
@@ -206,9 +211,7 @@ sub, sup {
 }
 
 .rowpicinfo {
-    display: flex;
     gap: 50px;
-    width: 1000px;
     justify-content: space-between;
     margin-top: 45px;
 }
@@ -234,13 +237,7 @@ sub, sup {
     margin: 0;
 }
 
-.discovery {
-    background: #e7e5e5;
-    padding: 2rem 1rem;
-}
-
 .frame-video {
-    display: flex;
     gap: 1rem;
     max-width: 960px;
     margin: 0 auto;
@@ -248,7 +245,7 @@ sub, sup {
 
 .video {
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
     width: 100%;
 }
@@ -270,7 +267,7 @@ sub, sup {
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 0 0 20px 20px; /* มนเฉพาะขอบล่าง */
+    border-radius: 0 0 12px 12px; /* มนเฉพาะขอบล่าง */
 }
 
 .ratio {
@@ -309,8 +306,7 @@ sub, sup {
 
 .gap-video {
     max-width: 1280px;
-    display: flex;
-    gap: 20px;
+    gap: 50px;
     width: 100%; /* เต็มกว้าง */
 }
   
@@ -326,7 +322,7 @@ sub, sup {
     position: relative;
     background-color: white;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     flex: 1 1 300px; /* รูปแต่ละรูปกว้างขั้นต่ำ 300px และขยายได้ */
     max-width: 100%;
 }
@@ -339,8 +335,7 @@ sub, sup {
 }
 
 .box-img {
-    display: flex;
-    gap: 20px; /* ช่องว่างระหว่างรูป */
+    gap: 50px; /* ช่องว่างระหว่างรูป */
     justify-content: center; /* ตรงกลาง */
     margin-top: 20px;
 }
@@ -370,7 +365,6 @@ sub, sup {
     opacity: 0.0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     color: #ffffff;
-    display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
@@ -391,7 +385,7 @@ sub, sup {
   
   .photo-img:hover {
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px;
   }
   
   .text > p:nth-child(2) {
@@ -418,94 +412,29 @@ sub, sup {
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
+    padding: 5rem 2.4rem;
     box-sizing: border-box;
   }
 
 .hd-li{
-    display: flex;
     text-align: center;
     justify-content: center;
     font-size: 3rem;
-    color: var(--w-accent) !important;
+    color: var(--bs-body-color) !important;
     margin: 0;
 }
 
 .wi-dis{
     margin: auto;
-    max-width: 1000px;
 }
 
-@media (max-width: 940px) {
-    .info-container,
-    .rowpicinfo,
-    .box-img,
-    .gap-video,
-    .frame-video {
-      flex-direction: column !important;
-    }
-  
-    .info-image img,
-    .photo-img,
-    .thumnail-text,
-    .thumnail-video {
-        max-width: 100% !important;
-    }
-  
-    .picinfo {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 3 / 2;
-    }
-
-    .photo-img{
-        flex: none;
-    }
-
-    .rowpicinfo div {
-        width: 100%;
-        height: 100%;
-        gap: 50px;
-    }
-
-    .rowpicinfo{
-        gap: 90px;
-    }
-
-    ul.social{
-        padding: 0;
-    }
-
-    .herosec{
-        justify-content: center;
-    }
-
-    .tread-x{
-        width: 100%;
-    }
-
-    .rv, .wi-dis{
-        max-width: 600px;
-    }
-  }
+.stage{
+    margin-top: 50px;
+}
 
 .rv{
-    display: flex;
     margin: auto;
     justify-content: center;
-}
-
-
-.head-embed {
-    display: flex;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    gap: 15px;
 }
 
 .iframe {
@@ -518,7 +447,6 @@ sub, sup {
 }
 
 .social-head{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -537,25 +465,21 @@ sub, sup {
 }
 
 .st-l{
-    display: flex;
     justify-content: center
 }
 
 .latext{
     gap: 20px;
-    display: flex;
     align-items: center;
 }
 
 
 
 .head-embed {
-    max-width: 1000px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding: 15px 0;
     gap: 15px;
 }
 
@@ -568,18 +492,6 @@ sub, sup {
     width: 100%; 
 }
 
-.social-head{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-blockquote{
-    margin: 0;
-}
-
 .instagram-media{
     background-color: white; 
     border-radius: 6px; 
@@ -589,34 +501,30 @@ blockquote{
     margin: 18px auto;
     width: 100%; 
     padding: 0px; 
-    height: 458px;
+    height: 473px;
 }
 
 /* Fan button */
 .all-botton {
     width: 100%;
-    max-width: 1000px; 
-    margin: 0 auto;
-    gap: 10px;
-    margin-bottom: 40px;
+    height: 559px;
+    margin: auto;
+    gap: 20px;
     flex-direction:column;
+    padding: 33px 0 53px 0;
 }
 
 .botton {
-    flex: 1; 
-    display: flex; 
+    flex: 1;  
     justify-content: center;  
 }
 
 .fan-sigh svg {
-    margin: 15px;
-    height: 30px;
-    width: 30px;
-    display: flex;
+    padding: 21px;
+    height: 100%;
 }
 
 .fan-sigh{
-    display: flex;
     align-items: center;
     text-decoration: none;
 }
@@ -624,7 +532,7 @@ blockquote{
 
 .text-social{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.5rem;
     
 }
 
@@ -639,6 +547,7 @@ blockquote{
 }
 
 .ig-social,.fb-social,.x-social,.line-social,.discord-social,.collum-social ,.ig-social::after{
+    display: flex;
     width: 100%; 
     border-radius: 10px; 
     transition: background-color 0.3s ease;
@@ -741,7 +650,6 @@ blockquote{
 
 .collum-social{
     display: flex;
-    max-width: 1000px;
     width: 100%;
     gap: 10px;
     margin-bottom: 10px;
@@ -801,6 +709,78 @@ blockquote{
 
 /* Media Queries */
 @media (max-width: 940px) {
+.info-container,
+    .rowpicinfo,
+    .box-img,
+    .gap-video,
+    .frame-video {
+      flex-direction: column !important;
+    }
+  
+    .info-image img,
+    .photo-img,
+    .thumnail-text,
+    .thumnail-video {
+        max-width: 100% !important;
+    }
+  
+    .picinfo {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 3 / 2;
+    }
+
+    .bg-info {
+        position: relative;
+    }
+
+    .info-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .info-image img {
+        max-width: none !important;
+    }
+
+    .info-text {
+        text-align: center;
+        margin-top: 60px; /* เว้นที่เพิ่มเพื่อไม่ให้ทับรูป */
+    }
+
+    .photo-img{
+        flex: none;
+    }
+
+    .rowpicinfo div {
+        width: 100%;
+        height: 100%;
+        gap: 50px;
+    }
+
+    .rowpicinfo{
+        gap: 90px;
+    }
+
+    ul.social{
+        padding: 0;
+    }
+
+    .herosec{
+        justify-content: center;
+    }
+
+    .tread-x{
+        width: 100%;
+    }
+
+    .rv, .wi-dis, .bg-info{
+        max-width: 600px;
+    }
+
     .collum-social{
         max-width: 600px;
     }
