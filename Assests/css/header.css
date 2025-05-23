@@ -22,8 +22,9 @@
 }
 
 .site-header.scrolled {
-  background-color: white;
-      --w-header-bg: none;
+    background-color: white;
+    --w-header-bg: none;
+    box-shadow: 0 0 12px 0px #d1d9e6 ;
 }
 
 .site-header.scrolled .n-toggle b{
@@ -185,11 +186,13 @@ hr.scrolled{
 }
 
 .site-header.menu-open .n-toggle b::before {
+    background-color: var(--bs-body-color);
     transform: rotate(45deg);
-    top: 0;
+    top: 0; 
 }
 
 .site-header.menu-open .n-toggle b::after {
+    background-color: var(--bs-body-color);
     transform: rotate(-45deg);
     top: 0;
 }
@@ -202,14 +205,20 @@ hr.scrolled{
     color: var(--bs-body-color);
 }
 
+@media (max-width:425px) {
+    .n-manu-ul{
+        width: 100%!important;
+    }
+}
+
 @media (max-width: 991px) {
     .n-manu-ul {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 240px;
+        width: 350px;
         height: 100vh;
-        background: rgba(0,0,0, 0.2);
+        background-color: #fff;
         flex-direction: column;
         align-items: flex-start;
         padding: 80px 16px 16px;
@@ -224,6 +233,11 @@ hr.scrolled{
 
     .n-manu-ul a{
         font-size: 20px;
+        color: var(--bs-body-color);
+    }
+
+    .site-header .nav-text {
+        color: var(--bs-body-color);
     }
 
     .n-manu-ul li {
@@ -235,6 +249,9 @@ hr.scrolled{
         right: 0;
     }
 
+    .svgicon path {
+    fill: var(--bs-body-color);
+  }
 }
 
 .n-manu-ul hr {
@@ -245,8 +262,9 @@ hr.scrolled{
 }
 
 .site-header:not(.active) .n-manu-ul hr {
-    border-top: 1px solid rgb(255, 255, 255); /* ให้ขาวเวลาหัวข้อเป็นสีขาว */
+    border-top: 2px solid #29546e; /* ให้ขาวเวลาหัวข้อเป็นสีขาว */
 }
 
-
-
+#info, #social, #library{
+    scroll-margin-top: 70px; 
+}
