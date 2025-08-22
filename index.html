@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,95 +55,230 @@
         <link rel="stylesheet" href="/support/css/main.css">
         <link rel="stylesheet" href="/support/css/header.css">
         <link rel="stylesheet" href="/support/css/footer.css">
+        <link rel="stylesheet" href="/support/css/1073.css">
 
-        <script src="/support/js/script.js"></script><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
-    <link rel="stylesheet" type="text/css" id="ttEmbedLibCSS" href="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.css"><link rel="preconnect" href="https://www.tiktok.com" crossorigin=""><link rel="preconnect" href="https://sf16-website-login.neutral.ttwstatic.com" crossorigin=""><link rel="preconnect" href="https://libraweb-va.tiktok.com" crossorigin=""></head>
+        <script src="/support/js/script.js" defer></script>
+        <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+        <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+        <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+        <style lang="en" type="text/css" id="dark-mode-native-style"></style>
+        <style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" class="native-dark-class-original">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" id="ttEmbedLibCSS" href="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.css">
+        <link rel="preconnect" href="https://www.tiktok.com" crossorigin="">
+        <link rel="preconnect" href="https://sf16-website-login.neutral.ttwstatic.com" crossorigin="">
+        <link rel="preconnect" href="https://libraweb-va.tiktok.com" crossorigin="">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </head>
     <body>
-        <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3G8VXDF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        
         <header>
-            <fieldset class="switcher">
-                <legend class="switcher__legend">Choose theme</legend> 
-                <label class="switcher__option">
-                    <input class="switcher__input" type="radio" name="theme" value="light" c-option="1" checked/>
-                    <svg class="switcher__icon" viewBox="0 0 24 24" fill="none"> 
-                        <path d="M17 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                        <path d="M9 17H15" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                    </svg>
+            <fieldset class="switcher" aria-label="Choose section">
+            <legend class="switcher__legend">Choose section</legend>
+            <div class="switcher__track">
+                <div class="switcher__indicator" aria-hidden="true"></div>
+                <label class="switcher__option" data-href="#home">
+                <input class="switcher__input" type="radio" name="nav" value="home" c-option="1" checked />
+                <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 17H15" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 </label>
-                <label class="switcher__option">
-                    <input class="switcher__input" type="radio" name="theme" value="dark" c-option="2" />
-                    <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" >
-                        <path d="M15 4V2M15 4V6M15 4H10.5M3 10V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V10H3Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                        <path d="M3 10V6C3 4.89543 3.89543 4 5 4H7" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                        <path d="M7 2V6" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                        <path d="M21 10V6C21 4.89543 20.1046 4 19 4H18.5" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </label>
-                <label class="switcher__option">
-                    <input class="switcher__input" type="radio" name="theme" value="dark" c-option="3" />
-                    <svg class="switcher__icon" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17Z" stroke="var(--c)" stroke-width="1.5"></path> 
-                        <path d="M6 8H7" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                    </svg>
-                </label>
-                    <label class="switcher__option">
-                        <input class="switcher__input" type="radio" name="theme" value="dark" c-option="4" />
-                        <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 16C9.20914 16 11 14.2091 11 12C11 9.79086 9.20914 8 7 8C4.79086 8 3 9.79086 3 12C3 14.2091 4.79086 16 7 16Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                            <path d="M15 16C16.1046 16 17 14.2091 17 12C17 9.79086 16.1046 8 15 8C13.8954 8 13 9.79086 13 12C13 14.2091 13.8954 16 15 16Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                            <path d="M20 16C20.5523 16 21 14.2091 21 12C21 9.79086 20.5523 8 20 8C19.4477 8 19 9.79086 19 12C19 14.2091 19.4477 16 20 16Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </label>
-                    <label class="switcher__option">
-                        <input class="switcher__input" type="radio" name="theme" value="dark" c-option="5" />
-                        <svg class="switcher__icon" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 19V11C7 9.89543 7.89543 9 9 9H20C21.1046 9 22 9.89543 22 11V19C22 20.1046 21.1046 21 20 21H9C7.89543 21 7 20.1046 7 19Z" stroke="var(--c)" stroke-width="1.5"></path> 
-                            <path d="M6.5 16H4C2.89543 16 2 15.1046 2 14V6C2 4.89543 2.89543 4 4 4H15C16.1046 4 17 4.89543 17 6V9" stroke="var(--c)" stroke-width="1.5"></path> 
-                            <path d="M10 12H11" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-                            <path d="M5 7H6" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </label>
-                <!--   <div class="switcher__toggle"></div> -->
-                <div class="switcher__filter">
-                    <svg>
-                        <filter id="switcher" primitiveUnits="objectBoundingBox">
-                            <feImage result="map" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" href="/support/filter/w-396.png"/>
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="0.001" result="blur"/>
-                            <feDisplacementMap id="disp" in="blur" in2="map" scale="0.33" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-                        </filter>
-                    
-                        <filter id="toggler" primitiveUnits="objectBoundingBox">
-                            <feImage result="map" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" href="/support/filter/w-396.png"/>
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="0.01" result="blur"/>
-                            <feDisplacementMap id="disp" in="blur" in2="map" scale="0.5" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-                        </filter>
-                    </svg>
-                </div>
-            </fieldset>
 
+                <label class="switcher__option" data-href="#event">
+                <input class="switcher__input" type="radio" name="nav" value="event" c-option="2" />
+                <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 4V2M15 4V6M15 4H10.5M3 10V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V10H3Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 10V6C3 4.89543 3.89543 4 5 4H7" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 2V6" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 10V6C21 4.89543 20.1046 4 19 4H18.5" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </label>
+
+                <label class="switcher__option" data-href="#info">
+                <input class="switcher__input" type="radio" name="nav" value="info" c-option="3" />
+                <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17Z" stroke="var(--c)" stroke-width="1.5"/>
+                    <path d="M6 8H7" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </label>
+
+                <label class="switcher__option" data-href="#social">
+                <input class="switcher__input" type="radio" name="nav" value="social" c-option="4" />
+                <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 16C9.20914 16 11 14.2091 11 12C11 9.79086 9.20914 8 7 8C4.79086 8 3 9.79086 3 12C3 14.2091 4.79086 16 7 16Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 16C16.1046 16 17 14.2091 17 12C17 9.79086 16.1046 8 15 8C13.8954 8 13 9.79086 13 12C13 14.2091 13.8954 16 15 16Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 16C20.5523 16 21 14.2091 21 12C21 9.79086 20.5523 8 20 8C19.4477 8 19 9.79086 19 12C19 14.2091 19.4477 16 20 16Z" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </label>
+
+                <label class="switcher__option" data-href="#library">
+                <input class="switcher__input" type="radio" name="nav" value="library" c-option="5" />
+                <svg class="switcher__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 19V11C7 9.89543 7.89543 9 9 9H20C21.1046 9 22 9.89543 22 11V19C22 20.1046 21.1046 21 20 21H9C7.89543 21 7 20.1046 7 19Z" stroke="var(--c)" stroke-width="1.5"/>
+                    <path d="M6.5 16H4C2.89543 16 2 15.1046 2 14V6C2 4.89543 2.89543 4 4 4H15C16.1046 4 17 4.89543 17 6V9" stroke="var(--c)" stroke-width="1.5"/>
+                    <path d="M10 12H11" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 7H6" stroke="var(--c)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </label>
+            </div>
+            </fieldset>
         </header>
 
         <main>
-            <h1 style="display: none;">Niya BNK48</h1>
-            <section class="hero">
-                <div class="border-text">
-                    <div class="hv">
-                        <video class="video-bg" autoplay="" muted="" loop="" playsinline="">
+            <section id="home">
+                <div class="">
+                    <div class="hero-video w-100">
+                        <video class="video-bg w-100" autoplay="" muted="" loop="" playsinline="">
                             <source src="/support/video/BG-video.mp4" type="video/mp4">
                         </video>
                     </div>
+					<div class="ht-1">
+                        <div class="ht-2 display-2">
+                            <strong>Niya</strong> BNK48
+                            <p class="h3">Suvibha Laithomya</p>
+                        </div>
+                    </div>
         	    </div>
             </section>
-            <section>
-               <div>
-                   <p>Niya</p>
-                   <P>Suvibha Laithonya</P> 
-               </div>
+
+            <section id="event">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">Niya's event soon</h2>
+                    <p class="text-muted">ติดตามผลงานนีญ่าได้ที่</p>
+                </div>
+                <div class="container">
+                    <div class="da-col">
+                        <article class="carded card--1">
+                            <div class="card__img"></div>
+                            <a href="#" class="card_link">
+                                <div class="card__img--hover"></div>
+                            </a>
+                            <div class="card__info">
+                                <a href="https://www.facebook.com/photo/?fbid=122197185236053850&set=a.122115792680053850" class="card_link">
+                                    <div class="da-sp">
+                                        <div class="h5">BNK48 &amp; CGM48 CONCERT CHAPTER: NEXT</div>
+                                        <div class="ct-da">
+                                            <svg version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                                <path d="M16,3C10.5,3,6,7.5,6,13c0,8.4,9,15.5,9.4,15.8c0.2,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2C17,28.5,26,21.4,26,13 C26,7.5,21.5,3,16,3z M16,17c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S18.2,17,16,17z"></path>
+                                            </svg>
+                                            <p>MCC Hall, The Mall Lifestore Bangkapi</p>
+                                        </div>
+                                        <div class="ct-da">
+                                            <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2,19c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3v-8H2V19z M19,4h-2V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H9V3c0-0.6-0.4-1-1-1S7,2.4,7,3v1H5C3.3,4,2,5.3,2,7v2h20V7C22,5.3,20.7,4,19,4z"></path>
+                                            </svg>
+                                            <p>23 AUG 2025</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="carded card--2">
+                            <div class="card__img"></div>
+                            <a href="#" class="card_link">
+                                <div class="card__img--hover"></div>
+                            </a>
+                            <div class="card__info">
+                                <a href="https://www.facebook.com/photo/?fbid=122197185236053850&set=a.122115792680053850" class="card_link">
+                                    <div class="da-sp">
+                                        <div class="h5">NIPPON HAKU BANGKOK 2025</div>
+                                        <div class="ct-da">
+                                            <svg version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier"> 
+                                                    <path d="M16,3C10.5,3,6,7.5,6,13c0,8.4,9,15.5,9.4,15.8c0.2,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2C17,28.5,26,21.4,26,13 C26,7.5,21.5,3,16,3z M16,17c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S18.2,17,16,17z"></path> 
+                                                </g>
+                                            </svg>
+                                            <p>Queen Sirikit National Convention Center (Halls 5–6, LG Floor)</p>
+                                        </div>
+                                        <div class="ct-da">
+                                            <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2,19c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3v-8H2V19z M19,4h-2V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H9V3c0-0.6-0.4-1-1-1S7,2.4,7,3v1H5C3.3,4,2,5.3,2,7v2h20V7C22,5.3,20.7,4,19,4z"></path></g></svg>
+                                            <p>29-31 AUG 2025 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </article>    
+                        
+                        <article class="carded card--3">
+                            <div class="card__img"></div>
+                            <a href="#" class="card_link">
+                                <div class="card__img--hover"></div>
+                            </a>
+                            <div class="card__info">
+                                <a href="https://www.facebook.com/photo/?fbid=122197185236053850&set=a.122115792680053850" class="card_link">
+                                    <div class="da-sp">
+                                        <div class="h5">WORLD PUP EXPO 2025</div>
+                                        <div class="ct-da">
+                                            <svg version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier"> 
+                                                    <path d="M16,3C10.5,3,6,7.5,6,13c0,8.4,9,15.5,9.4,15.8c0.2,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2C17,28.5,26,21.4,26,13 C26,7.5,21.5,3,16,3z M16,17c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S18.2,17,16,17z"></path> 
+                                                </g>
+                                            </svg>
+                                            <p>MCC Hall, The Mall Lifestore Bangkapi</p>
+                                        </div>
+                                        <div class="ct-da">
+                                            <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2,19c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3v-8H2V19z M19,4h-2V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H9V3c0-0.6-0.4-1-1-1S7,2.4,7,3v1H5C3.3,4,2,5.3,2,7v2h20V7C22,5.3,20.7,4,19,4z"></path></g></svg>
+                                            <p>29 AUG 2025 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </article>    
+                    </div>
+                </div>
+            </section>
+
+            <section id="info">
+                <div class="bd-info container">
+                    <img src="support/img/h-body.png" alt="half-body" class="h-body">
+                    <div class="pc">
+                        <img src="support/img/profile.png" alt="profile" class="p-body">
+                    </div>
+                    <div class="br-i">
+                        <h2>Niya - Suvibha Laithomya</h2>
+                        <p>สวัสดีค่ะ ชื่อนีญ่า ชื่อจริง สุวิภาส์ ลายถมยา สุวิภาส์ แปลว่า “ผู้หญิงที่สวย” ชอบกินไดฟูกุรสชาเขียว แซลมอน และของเค็มทุกชนิด ชอบสีพาสเทลทุกสีงานอดิเรก เล่นรูบิค ฟัง The Ghost Radio ความสามารถพิเศษ เล่นรูบิค เล่นอูคูเลเล่</p>
+                        <ul>
+                            <li>ได้รับคัดเลือกให้เป็นเซ็มบัตสึในเพลงเดบิวต์รุ่น <a href="https://music.apple.com/th/album/mirai-to-wa-off-vocal-version/1765650639?i=1765650878">Mirai to wa?</a></li>
+                            <li>ได้รับคัดเลือกเป็นเซ็มบัตสึในเพลงรอง <a href="https://music.apple.com/th/album/saikyou-twintail-%E0%B8%97%E0%B8%A7-%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A5-%E0%B8%AA-%E0%B8%94%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%A2/1801922410?i=1801922635">Saikyou Twintail</a></li>
+                            <li>ตำแหน่ง Under Girls อันดับที่ 24 <sup>th</sup> จากการเลือกตั้ง BNK48 &amp; CGM48 Senbatsu General Election 2025</li>
+                            <li>มีผลงานในฐานะเซ็มบัตสึในซิงเกิลและอัลบั้มต่าง ๆ ของ <a href="https://tpop.fandom.com/wiki/Niya">BNK48</a> อย่างต่อเนื่อง</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="social">
+                <div class="container">
+                    <h2 class="fw-800 mb-1 display-5 t-center h-sec">Social Media</h2>
+                    <p class="fw-bold h5 mb-5 t-center">ช่องทางติดตามโซเชีลยลนีญ่า</p>
+                    <div class="row">
+                        <div class="col-12 col-lg-6 mb-3" style="overflow: hidden ;">
+                            <div class="ig-banner">
+                                <div class="fw-bold h3">Instagram</div>
+                            </div>
+                            <div class="iframe-ig">
+                                <iframe src="https://www.instagram.com/yourstellaloulover/embed/" frameborder="0" style="width:100%; max-width:100%; margin:0 auto; overflow: hidden; border-radius: 8px; height: 100%;"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3" style="overflow: hidden ;">
+                            <div class="iframe-tiktok">
+                                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@niya.bnk48.official" data-unique-id="niya.bnk48.official" data-embed-from="oembed" data-embed-type="creator" style="max-width:780px; min-width:288px;"> <section> <a target="_blank" href="https://www.tiktok.com/@niya.bnk48.official?refer=creator_embed">@niya.bnk48.official</a> </section> </blockquote> <script async onerror="var a=document.createElement('script');a.src='https://iframely.net/files/tiktok-embed.js';document.body.appendChild(a);" src="https://www.tiktok.com/embed.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
+    </body>
 </html>
