@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5 ,h6{
 
 section{
     padding: 80px 20px;
-    background-color: #fff0fd;
+    background-color: #fffcff;
 }
 
 #home{
@@ -204,7 +204,7 @@ section{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background-color: #ffe9ef;
+    background-color: #fdf2f6;
 }
 
 .h-body{
@@ -213,7 +213,6 @@ section{
 
 .br-i{
     color: var(--c-content);
-    max-width: 650px;
     display: flex;
     flex-direction: column;
     font-size: 1.16rem;
@@ -292,18 +291,426 @@ section{
     width: 100%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
 }
 
-.ig-banner div{
+.tiktok-banner{
+    padding: 24px;
+    background: var(--c-dark);
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+}
+
+.ig-banner div, .tiktok-banner div{
     margin: 0;
     color: var(--c-light);
 }
 
 .svg-banner{
-    position: absolute;
+    position: relative; 
     transform: rotate(12deg);
     width: 2800px;
     top: 0px;
     width: 25px;
+}
 
+.embed-row {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+    padding: 15px 0;
+    gap: 25px;
+    overflow: hidden;
+    display: flex;
+}
+
+.embed   {
+    width:50%; 
+    margin-bottom: 20px;
+    background-color: var(--c-light);
+    border-radius: 12px;
+}
+
+.iframe-instagram, .iframe-tiktok {
+    width: 100%;
+    background-color: var(--c-light);
+    border-radius: 0 0 12px 12px;
+}
+
+.instagram-media{
+    border-radius: 0 0 12px 12px !important; 
+    display: block; 
+    width: 100%; 
+    max-height: 494px;
+}
+
+.embed-ig, .embed-tiktok{
+    width: 100%;
+}
+
+.embed-ig iframe{
+    min-width: 0 !important;
+}
+
+.arrow-svg {
+    transform: rotate(-45deg);
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+.icon-overlay{
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-12deg);
+    opacity: .2;
+    transition: .3s;
+}
+
+.icon-svg{
+    fill: var(--c-light);
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+.icon-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-svg {
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: var(--c-light);
+    transition: all 0.4s ease;
+}
+
+/* ตัวหลัง */
+.icon-svg.back, .svg-inline--fa.back {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* ตัวหน้า */
+.icon-svg.front,.svg-inline--fa.front {
+    position: relative;
+    z-index: 1;
+}
+
+.ig-banner:hover, .tiktok-banner:hover{
+    opacity: 0.9;
+    transition: 0.4s ease;
+}
+
+.social-box:hover .svg-inline--fa.back{
+    opacity: 0.3;
+    transform: scale(2) rotate(15deg) translateX(9.5rem) translateY(-1.9rem);
+    transition: 0.3s;
+}
+
+.social-box:hover .fa-iam48.back{
+    opacity: 0.3;
+    transform: scale(2) rotate(30deg) translateX(8.5rem) translateY(-3.7rem);
+    transition: 0.3s;
+}
+
+.ig-banner:hover .icon-svg.back, .tiktok-banner:hover .icon-svg.back{
+    opacity: 0.3;
+    transform: scale(5.6) rotate(15deg) translateX(5.5rem) translateY(-0.8rem);
+}
+
+@media (max-width: 1400px) {
+    .ig-banner:hover .icon-svg.back, .tiktok-banner:hover .icon-svg.back{
+        transform: scale(5.6) rotate(15deg) translateX(4.5rem) translateY(-0.7rem);
+    }
+
+    .social-box:hover .svg-inline--fa.back{
+        transform: scale(2) rotate(15deg) translateX(8.5rem) translateY(-1.7rem);
+        transition: 0.3s;
+    }
+
+    .social-box:hover .fa-iam48.back{
+        transform: scale(2) rotate(30deg) translateX(7.5rem) translateY(-3.4rem);
+        transition: 0.3s;
+    }
+}
+
+.social-box.-instagram {
+    --bg: linear-gradient(45deg, rgba(240, 148, 51, .15) 0%, rgba(230, 104, 60, .15) 25%, rgba(220, 39, 67, .15) 50%, rgba(204, 35, 102, .15) 75%, rgba(188, 24, 136, .15) 100%);
+    --text: #dc2743;
+    --bg-hover: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --text-hover: #fff;
+}
+
+.social-box.-facebook {
+    --bg: rgba(24, 119, 242, .15);
+    --text: #1877F2;
+    --bg-hover: #1877F2;
+    --text-hover: #fff;
+}
+
+.social-box.-iam48{
+    --bg: linear-gradient(45deg, rgba(203, 150, 194, .15) 0%, rgba(104, 190, 177, .15) 100%);
+    --text: rgb(203, 150, 194);
+    --bg-hover: linear-gradient(45deg, rgba(203, 150, 194) 0%, rgba(104, 190, 177) 100%);
+    --text-hover: #fff;
+}
+
+.social-box.-tiktok, .social-box.-twitter {
+    --bg: #ebebeb;
+    --text: #000;
+    --bg-hover: #000;
+    --text-hover: #fff;
+}
+
+.social-box {
+    --bg: #f6f7fa;
+    --text: #000;
+    --bg-hover: #000;
+    --text-hover: #fff;
+    padding: 15px 20px;
+    border-radius: 1000px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1.125rem;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden; 
+}
+
+.social-box:hover {
+    background: var(--bg-hover);
+    color: var(--text-hover);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--w-accent-hover);
+    text-decoration: underline;
+}
+
+.social-box svg {
+    width: 50px;
+    height: 50px;
+    fill: var(--text);
+}
+
+.svg-inline--fa {
+    box-sizing: content-box;
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    width: var(--fa-width, 1.25em);
+}
+
+.social-box.-iam48 svg path {
+    fill: var(--text);
+    transition: 0.3s;
+}
+
+.social-box.-iam48:hover svg path {
+    fill: var(--text-hover);
+}
+
+.social-margin{
+    margin-bottom: 0 !important;
+}
+
+.svg-inline--fa.back {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+.svg-inline--fa.front {
+    position: relative;
+    z-index: 1;
+}
+
+.spaceFrame {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  animation: fadeEffect 1s;
+  border-radius: 12px;
+  min-height: 241.5px;
+  min-width: 210px;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.transparent-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: #ffffff;
+}
+
+.caption p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+/* Hover Effect */
+.item:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.item:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item:hover .caption {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+/* Fade-in effect */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.live-row{ 
+    flex-wrap: nowrap !important; 
+    overflow-x: hidden; 
+}
+
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.date p {
+    margin: 0;
+}
+
+.item {
+    position: relative;
+    
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0); /* เริ่มต้นโปร่งใส */
+    transition: background-color 0.3s ease;
+}
+
+/* เวลา hover item ให้ overlay มืดลง */
+.item:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.date {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    color: #ffffff;
+    z-index: 1;
+}
+
+/* เวลา hover ให้โผล่ + เลื่อนกลับขึ้น */
+.item:hover .date {
+    opacity: 1;
+}
+
+.l-1200 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 คอลัมน์ */
+    grid-template-rows: repeat(2, 1fr) !important;   /* 2 แถว */
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+@media (max-width: 1200px) {
+    #info{
+        height: 100%;
+        padding: 80px 20px;
+    }
+
+    .bd-info.container {
+        flex-direction: column;
+        margin: 0 auto;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .container{
+        max-width: 720px !important;
+    }
+
+    .h-body {
+        display: none;
+    }
+
+    .br-i {
+        padding: 90px 50px 50px;
+        margin-top: -75px;
+    }
+
+    .p-body {
+        display: block;
+    }
+
+    .embed-row,.row{
+        flex-direction: column;
+    }
+
+    .embed,.col-lg-4{
+        width: 100% !important;
+    }
+
+    .social-box:hover .svg-inline--fa.back{
+        transform: scale(2) rotate(15deg) translateX(17rem) translateY(-3.9rem);
+    }
+
+    .social-box:hover .fa-iam48.back{
+        transform: scale(2) rotate(30deg) translateX(16rem) translateY(-8.3rem);
+    }
+
+    .ig-banner:hover .icon-svg.back, .tiktok-banner:hover .icon-svg.back{
+        transform: scale(5.6) rotate(15deg) translateX(6rem) translateY(-1.1rem);
+    }
 }
