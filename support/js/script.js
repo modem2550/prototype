@@ -102,3 +102,73 @@ function openPopup() {
 function closePopup() {
   document.getElementById('popup-overlay').style.display = 'none';
 }
+
+(function addScrollSyncToSwitcher() {
+  const switchers = document.querySelectorAll('.switcher');
+
+  switchers.forEach(sw => {
+    const options = Array.from(sw.querySelectorAll('.switcher__option'));
+    const indicator = sw.querySelector('.switcher__indicator');
+
+    if (!indicator || options.length === 0) return;
+
+    // map section -> index
+    const sectionMap = new Map();
+    options.forEach((opt, idx) => {
+      const href = opt.getAttribute('data-href');
+      if (href && href.startsWith('#')) {
+        const target = document.querySelector(href);
+        if (target) sectionMap.set(target, idx);
+      }
+
+      // click event เพื่อเลื่อน indicator
+      opt.addEventListener('click', e => {
+        e.preventDefault();
+        slideIndicator(idx);
+        // scroll ไป section ด้วย smooth behavior
+        if (href && href.startsWith('#')) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    let isScrolling = false;
+
+    const observer = new IntersectionObserver(entries => {
+      if (isScrolling) return; // ป้องกัน conflict กับ click scroll
+      let visibleEntry = null;
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!visibleEntry || entry.intersectionRatio > visibleEntry.intersectionRatio) {
+            visibleEntry = entry;
+          }
+        }
+      });
+
+      if (visibleEntry) {
+        const idx = sectionMap.get(visibleEntry.target);
+        if (typeof idx === 'number') {
+          slideIndicator(idx);
+        }
+      }
+    }, { threshold: 0.4 }); // ลด threshold เพื่อให้ library trigger ง่ายขึ้น
+
+    // observe ทุก section
+    sectionMap.forEach((_idx, section) => observer.observe(section));
+
+    function slideIndicator(idx) {
+      const opt = options[idx];
+      if (!opt) return;
+
+      const optRect = opt.getBoundingClientRect();
+      const swRect = sw.getBoundingClientRect();
+
+      // slide indicator แบบเดียวกับโค้ดแรก
+      indicator.style.transition = 'transform 420ms cubic-bezier(1, 0.0, 0.4, 1)';
+      indicator.style.transform = `translateX(${optRect.left - swRect.left - 12}px)`;
+    }
+  });
+})();
